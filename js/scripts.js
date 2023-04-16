@@ -15,7 +15,7 @@ var request = new XMLHttpRequest()
 
 // Open a new connection, using the GET request on the URL endpoint
 //request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
-request.open('GET', 'https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49', true)
+request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
 
 request.onload = function () {
   // Begin accessing JSON data here
