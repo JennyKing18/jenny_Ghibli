@@ -14,7 +14,8 @@ app.appendChild(container)
 var request = new XMLHttpRequest()
 
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
+//request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
+request.open('GET', 'https://studio-ghibli-films-api.herokuapp.com/', true)
 
 request.onload = function () {
   // Begin accessing JSON data here
