@@ -8,7 +8,7 @@ container.setAttribute('class', 'container');
 
 app.appendChild(logo);
 app.appendChild(container);
-
+let testCounter = 0;
 
 async function fetchData() {
   try {
@@ -47,10 +47,10 @@ async function fetchData() {
       //Create Img holder
       const imageElement = document.createElement("img");
       imageElement.alt = `${person.name} Image`; 
-      imageElement.style.width = '100px'; 
+      imageElement.style.width = '200px'; 
 
-      // Fetch Image using Google API
-      fetchCharacterImage(person.name,card,imageElement);
+      // Fetch Image using Google API      
+      fetchCharacterImage(person.name,card,imageElement);      
       });
   } catch (error) {
       // Handle any errors
@@ -63,7 +63,7 @@ async function fetchCharacterImage(name,card,imgElement) {
     // Neede apiKey and engine ID from Google Cloud
     const searchEngineID = "02c07817b2b004f8d";
     const apiKey = "AIzaSyC_iFp0QucOU2kCk3g46Ybju1D68Y9STVg";
-    const query = "${name} Ghibli";
+    const query = name+" Ghibli";
 
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${searchEngineID}&searchType=image&key=${apiKey}`;
     // Check if the response is successful
