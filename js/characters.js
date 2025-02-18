@@ -14,7 +14,7 @@ app.appendChild(container)
 var request = new XMLHttpRequest()
 
 // Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://ghibliapi.herokuapp.com/people', true)
+request.open('GET', 'https://ghibliapi.vercel.app/people', true)
 
 request.onload = function () {
   // Begin accessing JSON data here
@@ -36,7 +36,9 @@ request.onload = function () {
         person.description = person.gender + ' '+ ' Age '+ person.age
         p.textContent = person.gender + ' - '+ ' Age '+ person.age
 
-        
+        // Creates Image ?
+        const pjImg = document.createElement("img");
+        person.logo
         // Append the cards to the container element
         container.appendChild(card)
 
